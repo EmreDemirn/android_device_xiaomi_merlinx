@@ -56,7 +56,7 @@ PRODUCT_PACKAGES += \
     SystemUIOverlayMerlinx \
     WifiResMerlinx
 
-# Rootdir
+# Init
 PRODUCT_PACKAGES += \
     init.project.rc
 
