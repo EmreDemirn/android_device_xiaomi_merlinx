@@ -14,6 +14,7 @@ $(call inherit-product, device/xiaomi/merlinx/device.mk)
 # Inherit some common Project Pixelage stuff.
 $(call inherit-product, vendor/pixelage/config/common_full_phone.mk)
 
+PIXELAGE_MAINTAINER := EmreDemirn
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_INCLUDE_PIXEL_CHARGER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
