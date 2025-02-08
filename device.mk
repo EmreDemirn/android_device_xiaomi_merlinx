@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/xiaomi/merlinx
+
 # Inherit from mt6768-common
 $(call inherit-product, device/xiaomi/mt6768-common/mt6768.mk)
 
@@ -47,7 +49,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-lineage
+    $(DEVICE_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
     FrameworksResOverlayMerlinx \
@@ -66,14 +68,14 @@ PRODUCT_PACKAGES += \
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(DEVICE_PATH)
 
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # SKU
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sku_props/build_ss_vendor.prop:$(TARGET_COPY_OUT_VENDOR)/build_ss_vendor.prop
+    $(DEVICE_PATH)/configs/sku_props/build_ss_vendor.prop:$(TARGET_COPY_OUT_VENDOR)/build_ss_vendor.prop
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/merlinx/merlinx-vendor.mk)
